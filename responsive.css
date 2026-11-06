@@ -1,0 +1,34 @@
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.language-toggle {
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font: 500 12px var(--mono);
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.language-toggle:hover {
+  background: var(--ink);
+  color: white;
+}
+
+.course-grid { grid-template-columns: repeat(3, 1fr); }
+.openshift { background: #f8e9ed; }
+.openshift:before { background: #d12f45; }
+.openshift .course-icon { color: #d12f45; }
+
+@media (max-width: 850px) {
+  .course-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 650px) {
+  .course-grid { grid-template-columns: 1fr; }
+  .header-tools { gap: 9px; }
+  .header-score { display: none; }
+}

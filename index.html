@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kubernetes、OpenShift、AnsibleのYAMLを、遊びながら身につけるクイズアプリ">
+  <title>YAML-Dojo | YAMLを、技にする。</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="YAML Dojo ホーム"><span class="brand-mark">&gt;_</span> YAML-DOJO</a>
+    <div class="header-tools">
+      <button id="language-toggle" class="language-toggle" type="button" aria-label="Switch language">EN</button>
+      <div class="header-score"><span data-i18n="points">稽古ポイント</span><strong id="total-score">0</strong><span>pt</span></div>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">WRITE YAML. BUILD CONFIDENCE.</p>
+      <h1 data-i18n-html="heroTitle">YAMLを、<em>技</em>にする。</h1>
+      <p class="hero-copy" data-i18n-html="heroCopy">Kubernetes、OpenShift、Ansibleを題材に、読む・直す・書く。<br>手を動かすほど、YAMLが自分の言葉になる道場です。</p>
+      <a class="button primary" href="#courses"><span class="button-label" data-i18n="start">稽古をはじめる</span> <span>→</span></a>
+    </section>
+    <section class="progress-wrap" aria-label="学習の進捗"><div class="progress-label"><span data-i18n="progress">本日の道のり</span><strong id="progress-text">0 / 9 問</strong></div><div class="progress-bar"><i id="progress-bar"></i></div></section>
+    <section id="courses" class="courses">
+      <div class="section-heading"><p class="eyebrow">CHOOSE YOUR ARENA</p><h2 data-i18n="chooseDojo">道場を選ぶ</h2></div>
+      <div class="course-grid">
+        <article class="course-card kube"><div class="course-icon">⎈</div><p class="card-kicker">MANIFEST DOJO</p><h3>Kubernetes<br><span data-i18n="manifestEdition">Manifest 編</span></h3><p data-i18n="kubeDesc">Pod、Deployment、Service。クラスタを動かす宣言を読み解こう。</p><button class="button outline" data-track="kubernetes"><span class="button-label" data-i18n="enterDojo">この道場に入る</span> <span>→</span></button></article>
+        <article class="course-card openshift"><div class="course-icon">◉</div><p class="card-kicker">PLATFORM DOJO</p><h3>OpenShift<br><span data-i18n="manifestEdition">Manifest 編</span></h3><p data-i18n="openshiftDesc">Route、BuildConfig、Deployment。開発者向けプラットフォームを攻略しよう。</p><button class="button outline" data-track="openshift"><span class="button-label" data-i18n="enterDojo">この道場に入る</span> <span>→</span></button></article>
+        <article class="course-card ansible"><div class="course-icon">A</div><p class="card-kicker">PLAYBOOK DOJO</p><h3>Ansible<br><span data-i18n="playbookEdition">Playbook 編</span></h3><p data-i18n="ansibleDesc">hosts、tasks、modules。自動化のレシピを自在に書こう。</p><button class="button outline" data-track="ansible"><span class="button-label" data-i18n="enterDojo">この道場に入る</span> <span>→</span></button></article>
+      </div>
+    </section>
+    <section id="quiz-area" class="quiz-section" hidden>
+      <div class="quiz-top"><button class="back" id="back-to-courses" data-i18n="chooseAgain">← 道場を選び直す</button><div id="quiz-meta"></div></div>
+      <div id="level-tabs" class="level-tabs" aria-label="レベル選択"></div>
+      <article class="quiz-card"><div class="quiz-card-head"><span id="question-number"></span><span class="challenge-badge" id="challenge-type"></span></div><h2 id="question-title"></h2><p id="question-description"></p><div id="quiz-content"></div><div class="quiz-actions"><button class="button primary" id="check-answer"><span class="button-label" data-i18n="check">答え合わせ</span> <span>→</span></button><button class="button ghost" id="next-question" hidden data-i18n="next">次の稽古へ →</button></div><div id="feedback" class="feedback" hidden></div></article>
+    </section>
+    <section class="howto"><p class="eyebrow">THREE WAYS TO TRAIN</p><h2 data-i18n="threeStages">YAMLの三段稽古</h2><div class="steps"><div><b>01</b><h3 data-i18n="spot">見抜く</h3><p data-i18n="spotDesc">並んだYAMLから違和感を探す。</p></div><div><b>02</b><h3 data-i18n="fill">補う</h3><p data-i18n="fillDesc">欠けた一行を自分で埋める。</p></div><div><b>03</b><h3 data-i18n="write">書く</h3><p data-i18n="writeDesc">要件からYAMLを組み立てる。</p></div></div></section>
+  </main>
+  <footer>YAML-DOJO <span>•</span> <span data-i18n="footer">楽しく学び、確かな一行へ。</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
